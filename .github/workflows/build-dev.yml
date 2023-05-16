@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - dev
+      - dev_1
     paths:
       - version.py
       - .github/workflows/build-dev.yml
