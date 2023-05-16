@@ -706,6 +706,20 @@ class ModuleConf(object):
                     "tooltip": "配置播放设备的访问地址，用于媒体详情页跳转播放页面；如为https则需要增加https://前缀，留空则默认与服务器地址一致",
                     "type": "text",
                     "placeholder": "http://127.0.0.1:8096"
+                },
+                "show_resumes": {
+                    "id": "emby.show_resumes",
+                    "required": False,
+                    "title": "是否在首页显示继续观看",
+                    "tooltip": "是否在首页显示继续观看，防止尴尬",
+                    "type": "switch"
+                },
+                "show_latests": {
+                    "id": "emby.show_latests",
+                    "required": False,
+                    "title": "是否在首页显示最近添加",
+                    "tooltip": "是否在首页显示最近添加，防止尴尬",
+                    "type": "switch"
                 }
             }
         },
@@ -738,6 +752,20 @@ class ModuleConf(object):
                     "tooltip": "配置播放设备的访问地址，用于媒体详情页跳转播放页面；如为https则需要增加https://前缀，留空则默认与服务器地址一致",
                     "type": "text",
                     "placeholder": "http://127.0.0.1:8096"
+                },
+                "show_resumes": {
+                    "id": "jellyfin.show_resumes",
+                    "required": False,
+                    "title": "是否在首页显示继续观看",
+                    "tooltip": "是否在首页显示继续观看，防止尴尬",
+                    "type": "switch"
+                },
+                "show_latests": {
+                    "id": "jellyfin.show_latests",
+                    "required": False,
+                    "title": "是否在首页显示最近添加",
+                    "tooltip": "是否在首页显示最近添加，防止尴尬",
+                    "type": "switch"
                 }
             }
         },
@@ -792,6 +820,20 @@ class ModuleConf(object):
                     "tooltip": "配置播放设备的访问地址，用于媒体详情页跳转播放页面；如为https则需要增加https://前缀，留空则默认与服务器地址一致",
                     "type": "text",
                     "placeholder": "https://app.plex.tv"
+                },
+                "show_resumes": {
+                    "id": "plex.show_resumes",
+                    "required": False,
+                    "title": "是否在首页显示继续观看",
+                    "tooltip": "是否在首页显示继续观看，防止尴尬",
+                    "type": "switch"
+                },
+                "show_latests": {
+                    "id": "plex.show_latests",
+                    "required": False,
+                    "title": "是否在首页显示最近添加",
+                    "tooltip": "是否在首页显示最近添加，防止尴尬",
+                    "type": "switch"
                 }
             }
         },

@@ -262,10 +262,10 @@ def index():
     LibrarySyncConf = SystemConfig().get(SystemConfigKey.SyncLibrary) or []
 
     # 继续观看
-    Resumes = MediaServer().get_resume()
-
+    Resumes = MediaServer().get_resume() if Config().get_config(MSType).get('show_resumes') else False
+    
     # 最近添加
-    Latests = MediaServer().get_latest()
+    Latests = MediaServer().get_latest() if Config().get_config(MSType).get('show_latests') else False
 
     return render_template("index.html",
                            ServerSucess=ServerSucess,

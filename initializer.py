@@ -84,7 +84,28 @@ def update_config():
         _config['app']['login_password'] = "[hash]%s" % generate_password_hash(
             login_password)
         overwrite_cofig = True
-
+    # 媒体服务器兼容旧配置
+    # emby
+    show_resumes = _config.get("emby", {}).get("show_resumes")
+    show_latests = _config.get("emby", {}).get("show_latests")
+    if show_resumes is None and show_latests is None:
+        _config['emby']['show_resumes'] = True
+        _config['emby']['show_latests'] = True
+        overwrite_cofig = True
+    # jellyfin
+    show_resumes = _config.get("jellyfin", {}).get("show_resumes")
+    show_latests = _config.get("jellyfin", {}).get("show_latests")
+    if show_resumes is None and show_latests is None:
+        _config['jellyfin']['show_resumes'] = True
+        _config['jellyfin']['show_latests'] = True
+        overwrite_cofig = True
+    # plex
+    show_resumes = _config.get("plex", {}).get("show_resumes")
+    show_latests = _config.get("plex", {}).get("show_latests")
+    if show_resumes is None and show_latests is None:
+        _config['jellyfin']['show_resumes'] = True
+        _config['jellyfin']['show_latests'] = True
+        overwrite_cofig = True
     # API密钥初始化
     if not _config.get("security", {}).get("api_key"):
         _config['security']['api_key'] = StringUtils.generate_random_str(32)

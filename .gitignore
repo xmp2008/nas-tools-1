@@ -8,3 +8,9 @@
 /build/**
 /venv/**
 /cloudflarespeedtest/**
+/.vscode/**
+/config/media.db
+/config/user.db
+/config/config.yaml
+/my_env/**
+/nohup.out
